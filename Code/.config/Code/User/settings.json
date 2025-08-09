@@ -1,0 +1,78 @@
+{
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "top",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "glassit.alpha": 220,
+  "files.autoSave": "afterDelay",
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/tmp/postman-collections-post-response.instructions.md": true,
+    "/tmp/postman-collections-pre-request.instructions.md": true,
+    "/tmp/postman-folder-post-response.instructions.md": true,
+    "/tmp/postman-folder-pre-request.instructions.md": true,
+    "/tmp/postman-http-request-post-response.instructions.md": true,
+    "/tmp/postman-http-request-pre-request.instructions.md": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.indent": 12,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+
+  "editor.minimap.enabled": false,
+  "explorer.compactFolders": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // vim settings
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.config/vscode/init.vim",
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "e"],
+      "commands": [
+        {
+          "command": "workbench.view.explorer",
+          "when": "!explorerViewletVisible"
+        },
+        {
+          "command": "workbench.action.toggleSidebarVisibility",
+          "when": "explorerViewletVisible"
+        }
+      ]
+    },
+    {
+      "before": ["<Esc>"],
+      "when": ["editorFocus"],
+      "commands": [":nohl"], // Clears highlight of current search
+      "silent": true
+    }
+  ],
+
+  "tailwindCSS.experimental.classRegex": [
+    // Used in Shadcn UI
+    // Adds support for tailwindcss class intellisense within CVA and CX from [Class Variance Authority](https://cva.style/)
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "window.title": " ",
+  "editor.fontFamily": "Jetbrains Mono, Fira Code, Courier New, monospace",
+  "terminal.integrated.fontFamily": "Jetbrains Mono, Fira Code",
+  "workbench.colorTheme": "Best Themes - Github Dark Default",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "editor.fontLigatures": false
+}
