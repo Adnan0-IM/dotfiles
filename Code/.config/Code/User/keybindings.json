@@ -10,6 +10,12 @@
     "when": "!chatSetupDisabled && !chatSetupHidden"
   },
   {
+    "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+
+  {
     "key": "ctrl+alt+i",
     "command": "-workbench.action.chat.open",
     "when": "!chatSetupDisabled && !chatSetupHidden"
@@ -325,7 +331,7 @@
     "when": "inQuickInput && quickInputType == 'quickPick'"
   },
   {
-    /** 
+    /**
         Doesn't work at the moment.
         Accessibility keybinds with "shift" when quickInput is open causes interference with keybinds.
         Will try to create PR to vscode if not resolved soon. https://github.com/microsoft/vscode/issues/180862
@@ -421,7 +427,13 @@
     "when": "composerFocused && !editorTextFocus || !editorTextFocus && focusedView =~ /^workbench.panel.aichat.view/"
   },
   {
-    "key": "shift+o",
-    "command": "debug.action.toggleDisassemblyViewSourceCode"
+    "key": "ctrl+j",
+    "command": "workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
   }
 ]
