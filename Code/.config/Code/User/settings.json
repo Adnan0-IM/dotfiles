@@ -75,5 +75,12 @@
     "<C-f>": false
   },
   "files.autoSave": "afterDelay",
-  "git.autofetch": true
+  "git.autofetch": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }
