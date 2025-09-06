@@ -29,13 +29,13 @@
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
   "window.title": " ",
-  "editor.fontFamily": "Jetbrains Mono, Fira Code, Courier New, monospace",
+  "editor.fontFamily": "Fira Code,Jetbrains Mono,  Courier New, monospace",
   "terminal.integrated.fontFamily": "Jetbrains Mono, Fira Code",
-  "workbench.colorTheme": "Best Themes - Github Dark Default",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "chat.commandCenter.enabled": false,
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.panel.showLabels": false,
   // === Neovim integration ===
@@ -82,5 +82,7 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  }
+  },
+  "window.menuBarVisibility": "toggle",
+  "editor.fontSize": 15
 }
