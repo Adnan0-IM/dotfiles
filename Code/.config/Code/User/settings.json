@@ -77,12 +77,7 @@
   "files.autoSave": "afterDelay",
   "git.autofetch": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
   "window.menuBarVisibility": "toggle",
-  "editor.fontSize": 15
+  "editor.fontSize": 15,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
