@@ -54,5 +54,9 @@ function y() {
 }
 
 
+if ! mountpoint -q ~/GoogleDrive; then
+  rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode full --daemon
+fi
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
