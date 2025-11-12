@@ -19,6 +19,9 @@ alias vim='$EDITOR'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/arch/cleanup.sh'
 
+# rclone mount gdrive
+alias rcmount='rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode full --cache-dir ~/.local/share/rclone-cache --vfs-cache-max-size 4G --vfs-cache-max-age 168h --dir-cache-time 2h --buffer-size 64M --poll-interval 15s --umask 002 --rc --log-file ~/.local/share/rclone/rclone.log --log-level INFO &'
+
 # -----------------------------------------------------
 # ML4W Apps
 # -----------------------------------------------------
