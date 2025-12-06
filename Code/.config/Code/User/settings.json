@@ -79,5 +79,6 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 15,
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prisma.hidePrisma6Prompts": true
 }

@@ -14,7 +14,7 @@ font-thicken = true
 
 
 # Theme (Catppuccin Mocha to match tmux)
-theme = catppuccin-mocha
+# theme = catppuccin-mocha
 background = 11111b
 foreground = dce0e8
 palette = 0=1e1e2e
