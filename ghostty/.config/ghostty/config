@@ -1,67 +1,29 @@
-# Ghostty Configuration for Manjaro/Hyprland (ML4W-inspired)
-# File: ~/.config/ghostty/config
-# Matches Kitty aesthetics with thin cursor, JetBrains Mono Nerd Font, and vi-style navigation
-
-# Font Settings
-# font-family = JetBrainsMono Nerd Font
-font-family = JetBrainsMonoNL NFP SemiBold
-font-size = 12
-font-family-bold = auto
-font-family-italic = auto
-font-family-bold-italic = auto
-font-feature = -liga,-calt
-font-thicken = true
-
-
-# Theme (Catppuccin Mocha to match tmux)
-# theme = catppuccin-mocha
-background = 11111b
-foreground = dce0e8
-palette = 0=1e1e2e
-palette = 1=f38ba8
-palette = 2=a6e3a1
-palette = 3=f9e2af
-palette = 4=89b4fa
-palette = 5=f5c2e7
-palette = 6=94e2d5
-palette = 7=cdd6f4
-palette = 8=585b70
-palette = 9=f38ba8
-palette = 10=a6e3a1
-palette = 11=f9e2af
-palette = 12=89b4fa
-palette = 13=f5c2e7
-palette = 14=94e2d5
-palette = 15=cdd6f4
-selection-foreground = 
-selection-background = 
-
-# Visual Effects
-background-opacity = 0.7
-background-blur-radius = 20
-window-padding-x = 10
-window-padding-y = 10
-minimum-contrast = 2.5
-
-# Cursor Settings
-cursor-style = bar
-cursor-opacity = 0.9
-cursor-invert-fg-bg = true
-
-# Terminal Settings
-term = xterm-kitty
-scrollback-limit = 2000
-
-# Window Settings
-window-height = 500
-window-width = 950
+# ── Appearance & Colors --------------------------------------------------
+theme = "light:Horizon Bright,dark:Broadcast"
+font-family = "JetBrainsMono NFM Regular"
+font-size = 13
+#window-padding-x = 10
+#window-padding-y = 10
+window-padding-balance = true
+background-opacity = 0.2                      
+window-decoration = false
 title = Ghostty
 window-title-font-family = JetBrainsMono Nerd Font
-window-decoration = false
+
+# ── Behaviour ------------------------------------------------------------
+# cursor-style = block
+mouse-scroll-multiplier = 2
+copy-on-select = clipboard
+window-save-state = always
 window-inherit-working-directory = true
 confirm-close-surface = false
+scrollback-limit = 2000
 
-# Keybindings
+# ── Default window size --------------------------------------------------
+window-height = 500
+window-width = 950
+
+# ── Keybindings ----------------------------------------------------------
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+v=paste_from_clipboard
 keybind = ctrl+shift+t=new_tab
