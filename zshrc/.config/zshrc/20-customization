@@ -13,7 +13,7 @@ POSH=agnoster
 # -----------------------------------------------------
 
 # Tmux Auto Start
-ZSH_TMUX_AUTOSTART=true       # Start automatically
+ZSH_TMUX_AUTOSTART=false       # Start automatically
 ZSH_TMUX_AUTOCONNECT=false    # Always give me a NEW session
 ZSH_TMUX_AUTOQUIT=false       # Don't close Kitty when I exit Tmux
 ZSH_TMUX_FIXTERM=true         # Ensure colors look correct

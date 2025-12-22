@@ -1,27 +1,27 @@
 # ── Appearance & Colors --------------------------------------------------
-theme = "light:Horizon Bright,dark:Broadcast"
-font-family = "JetBrainsMono NFM Regular"
-font-size = 13
-#window-padding-x = 10
-#window-padding-y = 10
-window-padding-balance = true
-background-opacity = 0.2                      
+
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = false
+background-opacity = 1
 window-decoration = false
 title = Ghostty
 window-title-font-family = JetBrainsMono Nerd Font
 
 # ── Behaviour ------------------------------------------------------------
 # cursor-style = block
-mouse-scroll-multiplier = 2
+mouse-scroll-multiplier = 3
 copy-on-select = clipboard
 window-save-state = always
 window-inherit-working-directory = true
 confirm-close-surface = false
-scrollback-limit = 2000
+scrollback-limit = 10000
 
 # ── Default window size --------------------------------------------------
-window-height = 500
-window-width = 950
+# window-height = 500
+# window-width = 950
 
 # ── Keybindings ----------------------------------------------------------
 keybind = ctrl+shift+c=copy_to_clipboard
@@ -32,3 +32,4 @@ keybind = ctrl+shift+left=previous_tab
 keybind = ctrl+shift+right=next_tab
 keybind = ctrl+shift+r=reload_config
 
+theme = noctalia
