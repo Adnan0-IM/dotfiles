@@ -31,7 +31,7 @@
   "window.title": " ",
   "editor.fontFamily": "Fira Code,Jetbrains Mono,  Courier New, monospace",
   "terminal.integrated.fontFamily": "Jetbrains Mono, Fira Code",
-  "workbench.colorTheme": "HyprLuna Material",
+  "workbench.colorTheme": "NoctaliaTheme",
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "chat.commandCenter.enabled": false,
