@@ -1,17 +1,10 @@
-# ── Appearance & Colors --------------------------------------------------
-
-font-family = "JetBrainsMono Nerd Font"
+font-family = "JetBrainsMono NF Regular"
 font-size = 12
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = false
-background-opacity = 1
 window-decoration = false
-title = Ghostty
 window-title-font-family = JetBrainsMono Nerd Font
-
-# ── Behaviour ------------------------------------------------------------
-# cursor-style = block
 mouse-scroll-multiplier = 3
 copy-on-select = clipboard
 window-save-state = always
@@ -19,17 +12,45 @@ window-inherit-working-directory = true
 confirm-close-surface = false
 scrollback-limit = 10000
 
-# ── Default window size --------------------------------------------------
-# window-height = 500
-# window-width = 950
+# keybindings
+keybind = `>r=reload_config
+keybind = `>x=close_surface
 
-# ── Keybindings ----------------------------------------------------------
+keybind = `>n=new_window
+
+# tabs 
+keybind = `>c=new_tab
+keybind = `>shift+l=next_tab
+keybind = `>shift+h=previous_tab
+keybind = `>comma=move_tab:-1
+keybind = `>period=move_tab:1
+
+# quick tab switch
+keybind = `>1=goto_tab:1
+keybind = `>2=goto_tab:2
+keybind = `>3=goto_tab:3
+keybind = `>4=goto_tab:4
+keybind = `>5=goto_tab:5
+keybind = `>6=goto_tab:6
+keybind = `>7=goto_tab:7
+keybind = `>8=goto_tab:8
+keybind = `>9=goto_tab:9
+
+# split
+keybind = `>\=new_split:right
+keybind = `>-=new_split:down
+
+keybind = ctrl+j=goto_split:bottom
+keybind = `>k=goto_split:top
+keybind = `>h=goto_split:left
+keybind = `>l=goto_split:right
+
+keybind = `>m=toggle_split_zoom
+
+keybind = `>e=equalize_splits
+
+# other
+copy-on-select = clipboard
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+v=paste_from_clipboard
-keybind = ctrl+shift+t=new_tab
-keybind = ctrl+shift+w=close_surface
-keybind = ctrl+shift+left=previous_tab
-keybind = ctrl+shift+right=next_tab
-keybind = ctrl+shift+r=reload_config
-
 theme = noctalia
