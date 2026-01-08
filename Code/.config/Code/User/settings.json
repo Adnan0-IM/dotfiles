@@ -31,7 +31,6 @@
   "window.title": " ",
   "editor.fontFamily": "Fira Code,Jetbrains Mono,  Courier New, monospace",
   "terminal.integrated.fontFamily": "Jetbrains Mono, Fira Code",
-  "workbench.colorTheme": "NoctaliaTheme",
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "chat.commandCenter.enabled": false,
@@ -80,5 +79,13 @@
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 15,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prisma.hidePrisma6Prompts": true
+  "prisma.hidePrisma6Prompts": true,
+  "redhat.telemetry.enabled": true,
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }
