@@ -10,7 +10,7 @@
     "/tmp/postman-folder-post-response.instructions.md": true,
     "/tmp/postman-folder-pre-request.instructions.md": true,
     "/tmp/postman-http-request-post-response.instructions.md": true,
-    "/tmp/postman-http-request-pre-request.instructions.md": true
+    "/tmp/postman-http-request-pre-request.instructions.md": true,
   },
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
@@ -18,7 +18,7 @@
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 12,
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 1,
   },
   "editor.minimap.enabled": false,
   "explorer.compactFolders": false,
@@ -26,7 +26,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
   ],
   "window.title": " ",
   "editor.fontFamily": "Fira Code,Jetbrains Mono,  Courier New, monospace",
@@ -66,12 +66,12 @@
       "before": ["<Esc>"],
       "when": ["editorFocus"],
       "commands": [":nohl"], // Clears highlight of current search
-      "silent": true
-    }
+      "silent": true,
+    },
   ],
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false
+    "<C-f>": false,
   },
   "files.autoSave": "afterDelay",
   "git.autofetch": true,
@@ -94,6 +94,7 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*"
-  }
+    "*.s3db": "${capture}.${extname}-*",
+  },
+  "workbench.editor.empty.hint": "hidden",
 }
