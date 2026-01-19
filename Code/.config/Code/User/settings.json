@@ -81,7 +81,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prisma.hidePrisma6Prompts": true,
   "redhat.telemetry.enabled": true,
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.colorTheme": "HyprLuna Material",
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
