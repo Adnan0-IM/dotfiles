@@ -4,6 +4,6 @@
 // ! PLACE YOUR CUSTOM CONFIGURATION ELSEWHERE !
 
 cursor {
-    xcursor-theme "ArcDusk-cursors"
+    xcursor-theme "ArcAurora-cursors"
     xcursor-size 24
 }
