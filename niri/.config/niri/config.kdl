@@ -196,7 +196,7 @@ environment {
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   TERMINAL "kitty"
 }
-spawn-at-startup "dms" "run"
+// spawn-at-startup "dms" "run"
 hotkey-overlay {
     skip-at-startup
 }
