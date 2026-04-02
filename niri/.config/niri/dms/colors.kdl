@@ -5,8 +5,8 @@ layout {
     background-color "transparent"
 
     focus-ring {
-        active-color   "#5f9f23ff"
-        inactive-color "#948f99"
+        active-color   "rgb(222, 128, 5)"
+        inactive-color "#7a5b0d"
         urgent-color   "#f2b8b5"
     }
 

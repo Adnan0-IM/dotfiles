@@ -97,4 +97,11 @@
     "*.s3db": "${capture}.${extname}-*",
   },
   "workbench.editor.empty.hint": "hidden",
+  "chat.viewSessions.orientation": "stacked",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+  },
 }

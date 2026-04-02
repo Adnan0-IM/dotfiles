@@ -78,7 +78,7 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
 
-    Mod+B repeat=false {spawn "helium-browser";}
+    Mod+B repeat=false {spawn "zen-browser";}
     Mod+V repeat=false {spawn "code";}
     Mod+E repeat=false {spawn "nautilus";}
 
