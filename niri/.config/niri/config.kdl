@@ -188,15 +188,10 @@ overview {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 environment {
   XDG_CURRENT_DESKTOP "niri"
-  SSH_AUTH_SOCK "/run/user/1000/gcr/ssh"
 }
-spawn-at-startup "systemctl" "--user" "import-environment" "SSH_AUTH_SOCK"
-spawn-at-startup "systemctl" "--user" "start" "valent"
 hotkey-overlay {
     skip-at-startup
 }
-// Open Valent window on login
-spawn-at-startup "valent"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
@@ -285,6 +280,7 @@ window-rule {
 // Open dms windows as floating by default
 window-rule {
     match app-id=r#"org.quickshell$"#
+    match app-id=r#"com.danklinux.dms$"#
     open-floating true
 }
 debug {
@@ -308,5 +304,3 @@ include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
-
-include "dms/windowrules.kdl"
