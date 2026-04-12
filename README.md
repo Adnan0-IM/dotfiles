@@ -2,6 +2,16 @@
 
 Opinionated dotfiles for a consistent Linux dev environment.
 
+## Table of Contents
+
+- Overview
+- Repository Layout
+- Quick Setup (Linux)
+- Install Notes
+- Example Layout (Stow)
+- Maintenance
+- Troubleshooting
+
 ## Overview
 
 - Purpose: centralize shell, editor, terminal, and tool configs.
@@ -79,6 +89,37 @@ ln -s /home/adnan/dotfiles/fastfetch ~/.config/fastfetch
 - Neovim: requires `nvim` in PATH.
 - Tmux: config may live at `~/.tmux.conf` or `~/.config/tmux` depending on layout.
 - VS Code: user settings live in `~/.config/Code/User` on Linux.
+
+## Install Notes
+
+These are quick pointers, not exhaustive setup guides.
+
+- Bash: `bash` is installed on most distros by default.
+- Zsh: install `zsh`, then set it as default if desired (`chsh -s /bin/zsh`).
+- Starship: install `starship` and add its init to your shell rc.
+- Neovim: install `neovim` (or `nvim`).
+- Tmux: install `tmux`.
+- Kitty: install `kitty` and use `~/.config/kitty`.
+- Ghostty: install `ghostty` and use `~/.config/ghostty`.
+- Fastfetch: install `fastfetch`.
+- Hyprland: install `hyprland` and ensure a Wayland session is available.
+- Niri: install `niri` (Wayland compositor).
+- Yazi: install `yazi`.
+- VS Code: install `code` from your distro or Microsoft repo.
+
+## Example Layout (Stow)
+
+If a package needs files under `~/.config/nvim`, the folder layout should mirror it:
+
+```
+dotfiles/
+	nvim/
+		.config/
+			nvim/
+				init.lua
+				lua/
+					...
+```
 
 ## Maintenance
 
