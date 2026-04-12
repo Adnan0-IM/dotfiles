@@ -4,34 +4,38 @@ Opinionated dotfiles for a consistent Linux dev environment.
 
 ## Overview
 
-- **Purpose:** Centralize shell, editor, terminal, and tool configs.
-- **Approach:** Use GNU Stow (recommended) or manual symlinks.
+- Purpose: centralize shell, editor, terminal, and tool configs.
+- Approach: GNU Stow for symlink management (recommended), or manual symlinks.
 
-## Structure
+## Repository Layout
 
-- `bashrc/` — Bash shell configuration.
-- `Code/` — VS Code (Linux) settings (typically `~/.config/Code/User`).
-- `fastfetch/` — Fastfetch config (typically `~/.config/fastfetch`).
-- `ghostty/` — Ghostty terminal configs (typically `~/.config/ghostty`).
-- `home/` — Home-level files (e.g., top-level dotfiles like `.gitconfig`).
-- `kitty/` — Kitty terminal configs (typically `~/.config/kitty`).
-- `nvim/` — Neovim configuration (typically `~/.config/nvim`).
-- `tmux/` — Tmux configuration.
-- `vscode/` — Additional VS Code-related settings/snippets.
-- `zshrc/` — Zsh configuration (e.g., `~/.config/zshrc`).
-- `bashrc/` — Bash configuration (e.g., `~/.config/bashrc`).
-- `.config/` — starship configuration (e.g., `~/.config`).
+Each folder is a Stow package that mirrors the final target path in `$HOME`.
 
-Note: Exact target paths depend on how each folder mirrors the destination. With Stow, each folder should contain the final path structure.
+- `.config/` - Shared config files that live under `~/.config` (for example, Starship).
+- `bashrc/` - Bash config (for example, `~/.bashrc` or `~/.config/bashrc`).
+- `Code/` - VS Code user settings on Linux (`~/.config/Code/User`).
+- `fastfetch/` - Fastfetch config (`~/.config/fastfetch`).
+- `ghostty/` - Ghostty terminal config (`~/.config/ghostty`).
+- `home/` - Home-level dotfiles (for example, `~/.gitconfig`).
+- `hypr/` - Hyprland config (`~/.config/hypr`).
+- `kitty/` - Kitty terminal config (`~/.config/kitty`).
+- `niri/` - Niri compositor config (`~/.config/niri`).
+- `nvim/` - Neovim config (`~/.config/nvim`).
+- `tmux/` - Tmux config (`~/.tmux.conf` or `~/.config/tmux`).
+- `vscode/` - Extra VS Code assets (snippets, keybindings, etc.).
+- `yazi/` - Yazi file manager config (`~/.config/yazi`).
+- `zshrc/` - Zsh config (for example, `~/.zshrc` or `~/.config/zshrc`).
+
+Note: exact targets depend on the folder's internal structure. With Stow, the package should contain the final path layout.
 
 ## Quick Setup (Linux)
 
 ### Prerequisites
 
-- GNU Stow installed
+- GNU Stow
 
 ```sh
-sudo pacman -S stow                           # Arch 
+sudo pacman -S stow                           # Arch
 # or
 sudo dnf install stow                         # Fedora
 # or
@@ -46,52 +50,48 @@ sudo zypper install stow                      # OpenSUSE
 cd /home/adnan/dotfiles
 
 # Preview what will be linked (no changes)
-stow -n -v bashrc fastfetch ghostty kitty nvim tmux zshrc Code vscode home -t ~
+stow -n -v .config bashrc fastfetch ghostty hypr kitty niri nvim tmux yazi zshrc Code vscode home -t ~
 
 # Apply the symlinks to your home directory
-stow bashrc fastfetch ghostty kitty nvim tmux zshrc Code vscode home -t ~
+stow .config bashrc fastfetch ghostty hypr kitty niri nvim tmux yazi zshrc Code vscode home -t ~
 ```
 
 If Stow reports conflicts, back up or remove the existing files first, or use `stow -D <pkg>` to unstow and retry.
 
 ### Manual Symlinks (alternative)
 
-Use when you prefer explicit links or if a folder isn’t stow-ready:
+Use manual links if you want explicit control or a folder is not Stow-ready. Adjust the paths to match the files you want.
 
 ```sh
 ln -s /home/adnan/dotfiles/zshrc/.zshrc ~/.zshrc
 ln -s /home/adnan/dotfiles/bashrc/.bashrc ~/.bashrc
-ln -s /home/adnan/dotfiles/homw ~/.config/home
+ln -s /home/adnan/dotfiles/home/.gitconfig ~/.gitconfig
 ln -s /home/adnan/dotfiles/nvim ~/.config/nvim
 ln -s /home/adnan/dotfiles/kitty ~/.config/kitty
 ln -s /home/adnan/dotfiles/ghostty ~/.config/ghostty
 ln -s /home/adnan/dotfiles/fastfetch ~/.config/fastfetch
-ln -s /home/adnan/dotfiles/.config ~/.config
 ```
 
 ## Component Notes
 
-- **Zsh (`zshrc/`):** Ensure `zsh` is installed. Optionally use a prompt like Starship.
-- **Bash (`bashrc/`):** Standard shell config if you use Bash.
-- **Neovim (`nvim/`):** Requires Neovim. Place under `~/.config/nvim`.
-- **Tmux (`tmux/`):** Typically links to `~/.tmux.conf` or `~/.config/tmux` depending on layout.
-- **Kitty (`kitty/`):** Place under `~/.config/kitty`.
-- **Ghostty (`ghostty/`):** Place under `~/.config/ghostty`.
-- **Fastfetch (`fastfetch/`):** Place under `~/.config/fastfetch`.
-- **VS Code (`Code/`, `vscode/`):** Linux user settings reside in `~/.config/Code/User`. Workspace-level settings may be in `vscode/`.
+- Zsh: install `zsh`. Optional prompt: Starship.
+- Bash: standard shell config if you use Bash.
+- Neovim: requires `nvim` in PATH.
+- Tmux: config may live at `~/.tmux.conf` or `~/.config/tmux` depending on layout.
+- VS Code: user settings live in `~/.config/Code/User` on Linux.
 
 ## Maintenance
 
-- **Add new configs:** Create a folder mirroring the destination path tree, then `stow <folder> -t ~`.
-- **Unstow:** `stow -D <folder> -t ~` to remove symlinks.
-- **Dry-run:** `stow -n -v <folder> -t ~` to preview changes.
-- **Conflicts:** Move or remove existing files, then retry.
+- Add new configs: create a folder that mirrors the target path tree, then `stow <folder> -t ~`.
+- Unstow: `stow -D <folder> -t ~`.
+- Dry run: `stow -n -v <folder> -t ~`.
+- Conflicts: move or remove existing files, then retry.
 
 ## Troubleshooting
 
-- Wrong paths? Check the folder’s internal structure mirrors the target location (e.g., `nvim/.config/nvim/…`).
-- Stow didn’t link? Use verbose preview: `stow -n -v <folder> -t ~` and inspect output.
-- Terminal/editor not picking up config? Verify symlink targets exist and the app’s config directory is correct for your distro.
+- Wrong paths: ensure the package mirrors the destination path (for example, `nvim/.config/nvim/...`).
+- Stow did not link: use verbose preview `stow -n -v <folder> -t ~` and inspect output.
+- Apps ignore config: verify the symlink targets exist and the app uses the expected config dir.
 
 ---
 
