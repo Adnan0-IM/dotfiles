@@ -103,7 +103,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
+    warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -175,6 +175,18 @@ layout {
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
+    opacity 0.7
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="dms:blurwallpaper"
+    opacity 0.7
+    background-effect {
+        blur true
+    }
 }
 overview {
     workspace-shadow {
@@ -189,12 +201,26 @@ overview {
 environment {
   XDG_CURRENT_DESKTOP "niri"
   EDITOR "nvim"
+  QT_QPA_PLATFORM "wayland;xcb"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  TERMINAL "kitty"
+  DMS_DISABLE_MATUGEN "1"
 }
 hotkey-overlay {
     skip-at-startup
 }
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+blur {
+    // off
+    passes 2
+    offset 4.0
+    noise 0.01
+    saturation 1.5
+}
+
 animations {
     workspace-switch {
         spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
@@ -232,6 +258,19 @@ animations {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
+// Global blur rule
+window-rule {
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+    popups {
+        background-effect {
+            blur true
+        }
+    }
+}
+
 window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
@@ -244,11 +283,30 @@ window-rule {
     draw-border-with-background false
     geometry-corner-radius 12
     clip-to-geometry true
+
+    opacity 0.9
+    background-effect {
+      blur true
+      xray false
+    }
+}
+window-rule {
+    match app-id="" title=".*YouTube.*"
+    opacity 1.0
+}
+window-rule {
+    match app-id="" title=".*Moviebox.*"
+    opacity 1.0
+}
+window-rule {
+    match app-id="" title=".*Reddit.*"
+    opacity 1.0
 }
 window-rule {
     match app-id=r#"^gnome-control-center$"#
     match app-id=r#"^pavucontrol$"#
     match app-id=r#"^nm-connection-editor$"#
+    match app-id=r#"^proton\.vpn\.app\.gtk$"#
     default-column-width { proportion 0.5; }
     open-floating false
 }
