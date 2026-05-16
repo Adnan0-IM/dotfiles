@@ -74,11 +74,6 @@
       "type": "memory",
     },
     {
-      "type": "command",
-      "key": "│ {#31}󰈀 ip addr {#keys}│",
-      "text": "ip -4 addr show scope global | awk '/inet/ {print $2; exit}' | cut -d/ -f1",
-    },
-    {
       "key": "├───────────┤",
       "type": "custom",
     },
