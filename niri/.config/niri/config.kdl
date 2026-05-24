@@ -299,7 +299,7 @@ window-rule {
     opacity 1.0
 }
 window-rule {
-    match app-id="" title=".*Reddit.*"
+    match app-id="" title=".*mpv.*"
     opacity 1.0
 }
 window-rule {
