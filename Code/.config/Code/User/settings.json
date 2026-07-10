@@ -1,5 +1,4 @@
 {
-  "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "top",
   "github.copilot.nextEditSuggestions.enabled": true,
   "glassit.alpha": 220,
@@ -12,7 +11,7 @@
     "/tmp/postman-http-request-post-response.instructions.md": true,
     "/tmp/postman-http-request-pre-request.instructions.md": true,
   },
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "catppuccin-mocha",
   "material-icon-theme.hidesExplorerArrows": true,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.enableStickyScroll": false,
@@ -103,6 +102,9 @@
     "plaintext": false,
     "markdown": true,
     "scminput": false,
+    "typescript": true,
+    "prisma": true,
+    "typescriptreact": true,
   },
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
@@ -114,4 +116,19 @@
     "**/.forgejo/workflows/*.yml",
     "**/.forgejo/workflows/*.yaml",
   ],
+  "yaml.schemas": {
+    "file:///home/adnan/.vscode/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml",
+    ],
+  },
+  "terminal.integrated.commandsToSkipShell": [
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal",
+  ],
+  "kilo-code.new.agentWorkStyle": "human-in-the-loop",
+  "kilo-code.new.showTaskTimeline": true,
+  "kilo-code.new.autocomplete.provider": "kilo",
+  "kilo-code.new.autocomplete.model": "mistralai/codestral-2508",
+  "workbench.sideBar.location": "right",
+  "explorer.confirmDragAndDrop": false,
 }
