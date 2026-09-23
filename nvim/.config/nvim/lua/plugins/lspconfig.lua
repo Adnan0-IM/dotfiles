@@ -104,6 +104,9 @@ return {
           },
         },
       },
+      qmlls = {
+        cmd = { "qmlls6" },
+      },
     },
     setup = {
       --- @deprecated -- tsserver renamed to ts_ls but not yet released, so keep this for now
