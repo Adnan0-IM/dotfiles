@@ -6,7 +6,7 @@
 palette = "catppuccin_macchiato"
 
 # Avoid warning on slow directory scans
-scan_timeout = 1000
+scan_timeout = 3000
 
 # Starship modules
 [character]
