@@ -128,6 +128,19 @@ image_bound = [10000, 10000]
 suppress_preload = false
 
 [plugin]
+prepend_preloaders = [
+  { url = "/run/user/*/gvfs/**/*", run = "noop" },
+  { url = "/run/media/*/**/*", run = "noop" },
+  { url = "/run/user/*/gvfs/google-drive:host=gmail.com,user=*/**/*", run = "noop", prio = "high" },
+  { url = "/run/user/*/gvfs/google-drive:host=gmail.com,user=*/**/*/", run = "noop", prio = "high" },
+]
+prepend_previewers = [
+  { url = "folder/*", run = "folder" },
+  { url = "/run/user/*/gvfs/**/*", run = "noop" },
+  { url = "/run/media/*/**/*", run = "noop" },
+  { url = "/run/user/*/gvfs/google-drive:host=gmail.com,user=*/**/*", run = "noop", prio = "high" },
+  { url = "/run/user/*/gvfs/google-drive:host=gmail.com,user=*/**/*/", run = "noop", prio = "high" },
+]
 fetchers = [
   # Mimetype
   { group = "mime", url = "*/", run = "mime.dir", prio = "high" },

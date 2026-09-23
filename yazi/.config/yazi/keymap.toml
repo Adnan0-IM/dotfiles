@@ -557,3 +557,73 @@ desc = "Enter the child directory, or open the file"
 [[mgr.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on = "T"
+run = "plugin toggle-pane min-preview"
+desc = "Toggle preview pane"
+
+[[mgr.prepend_keymap]]
+on = ["g", "s"]
+run = "plugin sduf"
+desc = "Open disk usage analyzer"
+
+[[mgr.prepend_keymap]]
+on = ["G", "m"]
+run = "plugin gvfs -- select-then-mount --jump"
+desc = "Select device to mount and jump"
+
+[[mgr.prepend_keymap]]
+on = ["G", "u"]
+run = "plugin gvfs -- select-then-unmount"
+desc = "Select device then unmount"
+
+[[mgr.prepend_keymap]]
+on = ["G", "U"]
+run = "plugin gvfs -- select-then-unmount --eject"
+desc = "Select device then eject"
+
+[[mgr.prepend_keymap]]
+on = ["G", "a"]
+run = "plugin gvfs -- add-mount"
+desc = "Add GVFS mount URI"
+
+[[mgr.prepend_keymap]]
+on = ["G", "e"]
+run = "plugin gvfs -- edit-mount"
+desc = "Edit GVFS mount URI"
+
+[[mgr.prepend_keymap]]
+on = ["G", "r"]
+run = "plugin gvfs -- remove-mount"
+desc = "Remove GVFS mount URI"
+
+[[mgr.prepend_keymap]]
+on = ["G", "j"]
+run = "plugin gvfs -- jump-to-device"
+desc = "Jump to mounted device"
+
+[[mgr.prepend_keymap]]
+on = ["G", "b"]
+run = "plugin gvfs -- jump-back-prev-cwd"
+desc = "Jump back to previous position"
+
+[[mgr.prepend_keymap]]
+on = ["G", "t"]
+run = "plugin gvfs -- automount-when-cd"
+desc = "Enable automount when cd"
+
+[[mgr.prepend_keymap]]
+on = ["<C-s>"]
+run = "plugin kdeconnect-send"
+desc = "Send selected files via KDE Connect"
+
+[[mgr.prepend_keymap]]
+on = [".", "s"]
+run = "plugin what-size"
+desc = "Calc size of selection or cwd"
+
+[[mgr.prepend_keymap]]
+on = ["<C-t>"]
+run = "plugin close-and-restore-tab restore"
+desc = "Restore closed tab"

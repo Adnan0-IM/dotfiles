@@ -13,6 +13,36 @@ use = "yazi-rs/plugins:mount"
 rev = "babfd0f"
 hash = "77e20b071404f97c09d3f9afdb9482e0"
 
+[[plugin.deps]]
+use = "shafayetejaman/sduf"
+rev = "f43ba4a"
+hash = "5f9b8fcd37fc225437a213c9674a0ffa"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "58c4f4e"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
+
+[[plugin.deps]]
+use = "boydaihungst/gvfs"
+rev = "c92953c"
+hash = "d1e8d33ed36d339d5588f036dc3a9204"
+
+[[plugin.deps]]
+use = "Deepak22903/kdeconnect-send"
+rev = "06674d1"
+hash = "869884767c2ef592bfb7f5764f8fcae3"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "1cb456f"
+hash = "7699acf73a1079f8a4afef5cec84ce73"
+
+[[plugin.deps]]
+use = "MasouShizuka/close-and-restore-tab"
+rev = "b2153bc"
+hash = "1493e40f8f4f222c9ecb24cf85ccabd2"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "0670801"
