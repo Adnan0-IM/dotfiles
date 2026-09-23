@@ -40,7 +40,7 @@ config-notification {
 
 gestures {
     hot-corners {
-        off
+        // off
     }
 }
 
@@ -54,7 +54,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-            // layout "us,ru"
+            layout "gb"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
@@ -158,7 +158,7 @@ layout {
     // `draw-border-with-background`.
     border {
         off
-        width 4
+        width 2
         active-color   "#707070"      // Neutral gray
         inactive-color "#d0d0d0"      // Light gray
         urgent-color   "#cc4444"      // Softer red
@@ -259,17 +259,17 @@ animations {
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 // Global blur rule
-// window-rule {
-//     opacity 0.9
-//     background-effect {
-//         blur true
-//     }
-//     popups {
-//         background-effect {
-//             blur true
-//         }
-//     }
-// }
+window-rule {
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+    popups {
+        background-effect {
+            blur true
+        }
+    }
+}
 
 window-rule {
     // This regular expression is intentionally made as specific as possible,
@@ -284,19 +284,16 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 
-    // opacity 0.9
-    // background-effect {
-    //   blur true
-    //   xray false
-    // }
-}
-window-rule {
-    match app-id="" title=".*YouTube.*"
-    opacity 1.0
+    opacity 0.9
+    background-effect {
+      blur true
+      xray false
+    }
 }
 window-rule {
     match app-id="" title=".*Helium.*"
     match app-id="" title=".*Zen.*"
+    match app-id="" title=".*Brave.*"
     opacity 1.0
 }
 window-rule {
