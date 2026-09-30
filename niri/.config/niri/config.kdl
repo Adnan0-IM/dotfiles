@@ -194,6 +194,7 @@ overview {
     }
 }
 // Add lines like this to spawn processes at startup.
+spawn-at-startup "valent" "--gapplication-service"
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
@@ -206,7 +207,7 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   TERMINAL "kitty"
-  DMS_DISABLE_MATUGEN "1"
+  DMS_DISABLE_MATUGEN "0"
 }
 hotkey-overlay {
     skip-at-startup

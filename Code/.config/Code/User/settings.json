@@ -80,7 +80,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prisma.hidePrisma6Prompts": true,
   "redhat.telemetry.enabled": true,
-  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "Dynamic Base16 DankShell (Dark)",
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -147,8 +147,12 @@
   "qt-core.additionalQtPaths": [
     {
       "name": "Qt-5.15.19-linux-g++-x86_64_from_PATH",
-      "path": "/usr/bin/qtpaths",
+      "path": "/usr/bin/qtpaths"
     },
+    {
+      "name": "Qt-5.15.19-linux-g++-x86_64_from_PATH",
+      "path": "/usr/bin/qmake"
+    }
   ],
   "network.meteredConnection": "off",
   "qt-qml.qmlls.useQmlImportPathEnvVar": true,
