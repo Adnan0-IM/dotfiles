@@ -51,7 +51,7 @@ setopt appendhistory
 # -----------------------------------------------------
 # eval "$(starship init zsh)"
 
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zash.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/json.omp.json)"
 
 # Shipped Theme
 # eval "$(oh-my-posh init zsh --config /usr/share/oh-my-posh/themes/agnoster.omp.json)"
