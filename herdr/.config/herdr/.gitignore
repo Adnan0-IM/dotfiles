@@ -13,3 +13,4 @@ release-notes.json
 # If you don't want to track installed plugins:
 plugins/
 herdr/.config/herdr/plugins/.tmp-install-*
+session-snapshots/
