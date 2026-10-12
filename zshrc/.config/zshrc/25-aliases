@@ -11,14 +11,27 @@ alias pf='fastfetch'
 alias ff='fastfetch'
 alias lzd='lazydocker'
 alias lzg='lazygit'
-alias ls='eza -a --icons=always'
+alias ls='eza -l --icons=always'
 alias ll='eza -al --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
 alias vim='$EDITOR'
-# alias ts='~/.config/ml4w/scripts/arch/snapshot.sh'
 alias wifi='nmtui'
+
+# -----------------------------------------------------
+# Git
+# -----------------------------------------------------
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gpl="git pull"
+alias gst="git stash"
+alias gsp="git stash; git pull"
+alias gfo="git fetch origin"
+alias gcheck="git checkout"
+alias gcredential="git config credential.helper store"
 
 # rclone mount gdrive
 alias rcmount='rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode full --cache-dir ~/.local/share/rclone-cache --vfs-cache-max-size 4G --vfs-cache-max-age 168h --dir-cache-time 2h --buffer-size 64M --poll-interval 15s --umask 002 --rc --log-file ~/.local/share/rclone/rclone.log --log-level INFO &'
