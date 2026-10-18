@@ -1,0 +1,18 @@
+# -----------------------------------------------------
+# CURSOR
+# -----------------------------------------------------
+
+# Herdr emulates the terminals in its panes and only forwards a cursor shape
+# to the outer terminal when the focused pane's program asks for one (DECSCUSR,
+# e.g. "\e[5 q"). A plain interactive shell never asks, so Herdr sends the
+# terminal default -- which is a block in Kitty -- and panes look chunky.
+#
+# Request a thin steady bar (DECSCUSR 6, no blink) at every prompt so panes
+# inside Herdr stay skinny and match Kitty's cursor_blink_interval 0.
+# Scoped to Herdr via HERDR_ENV so shells outside it are untouched.
+if [[ -n $HERDR_ENV ]]; then
+  _herdr_thin_cursor() { printf '\e[6 q' }
+  autoload -Uz add-zsh-hook
+  add-zsh-hook precmd _herdr_thin_cursor
+  _herdr_thin_cursor
+fi

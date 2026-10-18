@@ -8,4 +8,5 @@ Modular Zsh configuration files. This setup allows for a highly organized and cu
     - `20-customization`: Visual tweaks, prompt configuration, and shell behavior settings.
     - `25-aliases`: A dedicated file for Zsh-specific and general shell aliases.
     - `30-autostart`: Commands to be executed when the shell session begins.
+    - `35-cursor`: Requests a thin steady bar cursor inside Herdr panes.
     - `custom/`: A directory for additional user-defined scripts or local overrides.
