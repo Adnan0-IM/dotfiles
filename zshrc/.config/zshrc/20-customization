@@ -19,9 +19,7 @@ ZSH_TMUX_AUTOQUIT=false       # Don't close Kitty when I exit Tmux
 ZSH_TMUX_FIXTERM=true         # Ensure colors look correct
 # ZSH_TMUX_DEFAULT_SESSION_NAME="manjaro"
 plugins=(
-    git
     sudo
-    web-search
     archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -29,7 +27,6 @@ plugins=(
     copyfile
     copybuffer
     dirhistory
-    tmux
 )
 
 # Set-up oh-my-zsh

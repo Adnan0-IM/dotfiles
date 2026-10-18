@@ -157,7 +157,7 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
-key = "ctrl+t"
+key = "ctrl+i"
 type = "popup"
 command = "zsh"
 width = "80%"

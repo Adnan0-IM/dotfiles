@@ -27,6 +27,11 @@ binds {
     Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
+    // === Voice Input (voxtype) ===
+    Mod+D repeat=false hotkey-overlay-title="Dictate (voxtype)" {
+        spawn "voxtype" "record" "toggle";
+    }
+
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";

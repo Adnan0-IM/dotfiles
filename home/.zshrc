@@ -42,3 +42,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Antigravity CLI installer
 export PATH="/home/adnan/.local/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "/home/adnan/.config/vite-plus/env"
+
+# opencode
+export PATH=/home/adnan/.opencode/bin:$PATH

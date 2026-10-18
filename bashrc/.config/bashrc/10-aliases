@@ -11,7 +11,7 @@ alias pf='fastfetch'
 alias ff='fastfetch'
 alias lzd='lazydocker'
 alias lzg='lazygit'
-alias ls='eza -a --icons=always'
+alias ls='eza -l --icons=always'
 alias ll='eza -al --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
 alias shutdown='systemctl poweroff'
@@ -34,8 +34,6 @@ alias gfo="git fetch origin"
 alias gcheck="git checkout"
 alias gcredential="git config credential.helper store"
 
+# rclone mount gdrive
+alias rcmount='rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode full --cache-dir ~/.local/share/rclone-cache --vfs-cache-max-size 4G --vfs-cache-max-age 168h --dir-cache-time 2h --buffer-size 64M --poll-interval 15s --umask 002 --rc --log-file ~/.local/share/rclone/rclone.log --log-level INFO &'
 
-# -----------------------------------------------------
-# System
-# -----------------------------------------------------
-alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'

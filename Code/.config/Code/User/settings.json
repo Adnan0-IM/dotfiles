@@ -156,4 +156,5 @@
   ],
   "network.meteredConnection": "off",
   "qt-qml.qmlls.useQmlImportPathEnvVar": true,
+  "omnicopilot.baseUrl": "http://localhost:20128",
 }
