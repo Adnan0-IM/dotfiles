@@ -38,4 +38,8 @@ vim.opt.splitkeep = "cursor"
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
 
-vim.cmd("autocmd TermOpen * setlocal winhighlight=Normal:Normal,FloatBorder:Normal")
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = vim.api.nvim_create_augroup("user_termopen_winhl", { clear = true }),
+  pattern = "*",
+  command = "setlocal winhighlight=Normal:Normal,FloatBorder:Normal",
+})

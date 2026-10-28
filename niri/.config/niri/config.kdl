@@ -261,7 +261,7 @@ animations {
 // by setting an empty default-column-width.
 // Global blur rule
 window-rule {
-    opacity 0.9
+    opacity 1.0
     background-effect {
         blur true
     }

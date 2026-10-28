@@ -6,7 +6,6 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("n", "x", '"_x')
-
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
@@ -19,9 +18,13 @@ keymap.set("n", "<Leader>w", ":update<Return>", opts)
 keymap.set("n", "<Leader>q", ":quit<Return>", opts)
 keymap.set("n", "<Leader>Q", ":qa<Return>", opts)
 
--- File explorer with NvimTree
-keymap.set("n", "<Leader>f", ":NvimTreeFindFile<Return>", opts)
-keymap.set("n", "<Leader>t", ":NvimTreeToggle<Return>", opts)
+-- File explorer with Snacks
+keymap.set("n", "<Leader>f", function()
+  Snacks.explorer.reveal()
+end, { noremap = true, silent = true, desc = "Reveal current file in explorer" })
+keymap.set("n", "<Leader>t", function()
+  Snacks.explorer()
+end, { noremap = true, silent = true, desc = "Toggle explorer" })
 
 -- Tabs
 keymap.set("n", "te", ":tabedit")

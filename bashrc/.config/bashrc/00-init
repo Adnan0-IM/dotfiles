@@ -6,6 +6,8 @@
 # Exports
 # -----------------------------------------------------
 export EDITOR=nvim
+export VISUAL=vim
+export SUDO_EDITOR=vim
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/

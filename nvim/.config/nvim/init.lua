@@ -1,6 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your 'plugins'
 require("config.lazy")
-
+require("oil").setup()
 if vim.g.vscode then
   -- Basic options
   vim.opt.clipboard = "unnamedplus" -- sync with system clipboard

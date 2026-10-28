@@ -42,8 +42,6 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 # --- Yazi Setup ---
-export EDITOR="nvim"
-
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi || y "$@" --cwd-file="$tmp"

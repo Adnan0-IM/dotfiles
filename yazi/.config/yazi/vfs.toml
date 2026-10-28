@@ -1,1 +1,5 @@
-[services]
+[sftp.dietpi]
+host = "10.199.181.110" # host only, no "user@" prefix; mDNS "DietPi.local" resolves to a link-local IPv6
+user = "dietpi"
+port = 22
+password = "blabla"

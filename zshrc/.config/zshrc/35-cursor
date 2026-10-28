@@ -12,7 +12,9 @@
 # Scoped to Herdr via HERDR_ENV so shells outside it are untouched.
 if [[ -n $HERDR_ENV ]]; then
   _herdr_thin_cursor() { printf '\e[6 q' }
+  _herdr_reset_cursor() { printf '\e[0 q' }
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd _herdr_thin_cursor
+  add-zsh-hook preexec _herdr_reset_cursor
   _herdr_thin_cursor
 fi
